@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[菜鸟的JS学习笔记(一):js如何判断哪个元素触发了点击事件]]></title>
+    <url>%2F2017%2F11%2F10%2Fblog2%2F</url>
+    <content type="text"><![CDATA[EventTarget.addEventListenerEventTarget.addEventListener()方法将指定的监听器注册到 EventTarget 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 Document本身，或者任何其他支持事件的对象 (比如 XMLHttpRequest)。 语法target.addEventListener(type, listener); type表示监听事件类型的字符串。Listener当所监听的事件类型触发时，会接收到一个事件通知（实现了 Event 接口的对象）对象。listener 必须是一个实现了 EventListener 接口的对象，或者是一个函数 实现代码 index.html123456789101112131415161718192021&lt;!DOCTYPE html&gt;&lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;Title&lt;/title&gt; &lt;link rel = "stylesheet" href = "./index.css"&gt;&lt;/head&gt;&lt;body&gt;&lt;div style="width:500px;height:500px;background-color: #1A68A2" id="container"&gt; &lt;div class="innerDiv" data-index="1"&gt;1&lt;/div&gt; &lt;div class="innerDiv" data-index="2"&gt;2&lt;/div&gt; &lt;div class="innerDiv" data-index="3"&gt;3&lt;/div&gt; &lt;div class="innerDiv" data-index="4"&gt;4&lt;/div&gt; &lt;div class="innerDiv" data-index="5"&gt;5&lt;/div&gt; &lt;div class="innerDiv" data-index="6"&gt;6&lt;/div&gt; &lt;div class="innerDiv" data-index="7"&gt;7&lt;/div&gt; &lt;div class="innerDiv" data-index="8"&gt;8&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript" src="./index.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; index.css12345.innerDiv&#123; border:1px solid #cccccc; width:500px; height:50px &#125; index.js1234567function processInnderDiv(domDiv)&#123; console.log('div[data-index=%s] click',domDiv.getAttribute("data-index"));&#125;document.getElementById("container").addEventListener("click",function(event)&#123; processInnderDiv(event.target);&#125;,false);]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>菜鸟学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F10%2F10%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
